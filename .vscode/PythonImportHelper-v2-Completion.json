@@ -1,0 +1,223 @@
+[
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "SentenceTransformer",
+        "importPath": "sentence_transformers",
+        "description": "sentence_transformers",
+        "isExtraImport": true,
+        "detail": "sentence_transformers",
+        "documentation": {}
+    },
+    {
+        "label": "util",
+        "importPath": "sentence_transformers",
+        "description": "sentence_transformers",
+        "isExtraImport": true,
+        "detail": "sentence_transformers",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "ContextSearch",
+        "importPath": "entities.context_search",
+        "description": "entities.context_search",
+        "isExtraImport": true,
+        "detail": "entities.context_search",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "ContextSearch",
+        "kind": 6,
+        "importPath": "entities.context_search",
+        "description": "entities.context_search",
+        "peekOfCode": "class ContextSearch:\n    def __init__(self, text):\n        self.text = text\n        self.model = SentenceTransformer('all-MiniLM-L6-v2')\n    @property\n    def tokens(self):\n        return re.findall(r\"\\w+|[.,!?;]\", self.text)\n    @property\n    def sentences(self):\n        return re.split(r\"(?<=[.!?])\\s+\", self.text)",
+        "detail": "entities.context_search",
+        "documentation": {}
+    },
+    {
+        "label": "test_tokenization",
+        "kind": 2,
+        "importPath": "tests.test_context_search",
+        "description": "tests.test_context_search",
+        "peekOfCode": "def test_tokenization():\n    text = \"This is a test sentence.\"\n    cs = ContextSearch(text)\n    tokens = cs.tokens\n    expected_results = [\"This\", \"is\", \"a\", \"test\", \"sentence\", \".\"]\n    assert tokens == expected_results\ndef test_sentence_splitter():\n    text = \"This is a test sentence. This is another sentence.\"\n    cs = ContextSearch(text)\n    sentences = cs.sentences",
+        "detail": "tests.test_context_search",
+        "documentation": {}
+    },
+    {
+        "label": "test_sentence_splitter",
+        "kind": 2,
+        "importPath": "tests.test_context_search",
+        "description": "tests.test_context_search",
+        "peekOfCode": "def test_sentence_splitter():\n    text = \"This is a test sentence. This is another sentence.\"\n    cs = ContextSearch(text)\n    sentences = cs.sentences\n    expected_results = [\"This is a test sentence.\", \"This is another sentence.\"]\n    assert sentences == expected_results\ndef test_context_search():\n    text = \"Python maybe slow. Java is verbose.\"\n    cs = ContextSearch(text)\n    result = cs.search(\"slow\")",
+        "detail": "tests.test_context_search",
+        "documentation": {}
+    },
+    {
+        "label": "test_context_search",
+        "kind": 2,
+        "importPath": "tests.test_context_search",
+        "description": "tests.test_context_search",
+        "peekOfCode": "def test_context_search():\n    text = \"Python maybe slow. Java is verbose.\"\n    cs = ContextSearch(text)\n    result = cs.search(\"slow\")\n    expected_result = [\"Python maybe slow.\"]\n    assert result == expected_result\ndef test_context_search_if_no_representant_found():\n    text = \"Python maybe slow. Java is verbose.\"\n    cs = ContextSearch(text)\n    result = cs.search(\"slo\")",
+        "detail": "tests.test_context_search",
+        "documentation": {}
+    },
+    {
+        "label": "test_context_search_if_no_representant_found",
+        "kind": 2,
+        "importPath": "tests.test_context_search",
+        "description": "tests.test_context_search",
+        "peekOfCode": "def test_context_search_if_no_representant_found():\n    text = \"Python maybe slow. Java is verbose.\"\n    cs = ContextSearch(text)\n    result = cs.search(\"slo\")\n    expected_result = []\n    assert result == expected_result\ndef test_return_for_no_context_search_representant_found():\n    text = \"Python maybe slow. Java is verbose.\"\n    cs = ContextSearch(text)\n    result = cs.search(\"slo\")",
+        "detail": "tests.test_context_search",
+        "documentation": {}
+    },
+    {
+        "label": "test_return_for_no_context_search_representant_found",
+        "kind": 2,
+        "importPath": "tests.test_context_search",
+        "description": "tests.test_context_search",
+        "peekOfCode": "def test_return_for_no_context_search_representant_found():\n    text = \"Python maybe slow. Java is verbose.\"\n    cs = ContextSearch(text)\n    result = cs.search(\"slo\")\n    expected_result = []\n    assert result == expected_result\ndef test_advanced_context_search():\n    text = \"\"\"\n    Viajar é uma das melhores maneiras de conhecer novas culturas e expandir horizontes. Destinos como Paris, Tóquio e Nova York oferecem experiências únicas.\n    No entanto, é importante planejar bem os gastos para evitar surpresas financeiras durante a viagem.",
+        "detail": "tests.test_context_search",
+        "documentation": {}
+    },
+    {
+        "label": "test_advanced_context_search",
+        "kind": 2,
+        "importPath": "tests.test_context_search",
+        "description": "tests.test_context_search",
+        "peekOfCode": "def test_advanced_context_search():\n    text = \"\"\"\n    Viajar é uma das melhores maneiras de conhecer novas culturas e expandir horizontes. Destinos como Paris, Tóquio e Nova York oferecem experiências únicas.\n    No entanto, é importante planejar bem os gastos para evitar surpresas financeiras durante a viagem.\n    A inteligência artificial está revolucionando diversas indústrias. Empresas estão usando algoritmos avançados para analisar grandes volumes de dados e tomar\n    decisões mais rápidas e precisas. No entanto, há preocupações éticas sobre o uso indevido dessas tecnologias, especialmente no campo da privacidade dos usuários.\n    \"\"\"\n    cs = ContextSearch(text)\n    result = cs.advanced_search(\"Paris\")\n    expected_result = [",
+        "detail": "tests.test_context_search",
+        "documentation": {}
+    }
+]
