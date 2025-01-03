@@ -1,10 +1,12 @@
 import re
 from sentence_transformers import SentenceTransformer, util
+from typing import Optional
 
 class ContextSearch:
-    def __init__(self, text):
+    def __init__(self, text: Optional[str] = ""):
         self.text = text
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
+        self.threshold = 0
 
     @property
     def tokens(self):
@@ -30,7 +32,16 @@ class ContextSearch:
         sentence_scores = list(zip(self.sentences, similarities))
         sentence_scores = sorted(sentence_scores, key=lambda x: x[1], reverse=True)
         
-        threshold = 0.3
+        threshold = self.threshold
         result = [sent for sent, score in sentence_scores if score > threshold]
         
         return result
+
+
+cs = ContextSearch()
+cs.threshold = 0.6
+with open("entities/base.txt", "r") as file:
+    text = file.read()
+    cs.text = text
+
+print(cs.advanced_search("Qual meu nome?"))

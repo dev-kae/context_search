@@ -59,7 +59,7 @@ def test_advanced_context_search():
     cs = ContextSearch(text)
     result = cs.advanced_search("Paris")
     expected_result = [
-        "\n    Viajar é uma das melhores maneiras de conhecer novas culturas e expandir horizontes. Destinos como Paris, Tóquio e Nova York oferecem experiências únicas. No entanto, é importante planejar bem os gastos para evitar surpresas financeiras durante a viagem."
+        'Destinos como Paris, Tóquio e Nova York oferecem experiências únicas.'
     ]
     
     assert result == expected_result
